@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Companies;
-use App\User;
-use App\Assets;
 use App\Mail\NewCompanyNotification;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Auth;
 
 class CompaniesController extends Controller
 {

@@ -28,11 +28,9 @@ class HomeController extends Controller
         $companiescount = Companies::count();
         $assetcount = Assets::count();
 
-        //
         $newcompony = Companies::orderBy('id', 'desc')->take(5)->get();
         $newassets = Assets::orderBy('id', 'desc')->take(5)->get();
 
-        //return $newcompony;
         $data['newcompony'] = $newcompony;
         $data['newassets'] = $newassets;
         $data['companiescount'] = $companiescount;

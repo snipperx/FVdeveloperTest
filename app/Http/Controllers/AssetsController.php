@@ -56,7 +56,6 @@ class AssetsController extends Controller
         $asset->status = 1;
         $asset->save();
 
-        //return back();
         return redirect('/contacts/assets/' . $asset->id . '/view')->with('success_add', "The Asset has been added successfully");
     }
 
@@ -76,7 +75,6 @@ class AssetsController extends Controller
     public function showcampony(Assets $assets)
     {
         $company = Companies::where('id', $assets->id)->first();
-       // return $company;
         $data['company'] = $company;
         return view('companies.view_company')->with($data);
     }
